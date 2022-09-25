@@ -11,8 +11,8 @@ import Icon from "react-native-vector-icons/FontAwesome";
 const AddItem = ({ onAddItem }) => {
   const [textInput, setTextInput] = useState("");
 
-  const onChange = (e) => {
-    setTextInput(e);
+  const onChange = (textValue) => {
+    setTextInput(textValue);
   };
 
   return (
@@ -21,7 +21,7 @@ const AddItem = ({ onAddItem }) => {
         value={textInput}
         placeholder="Add Item ..."
         style={styles.input}
-        onChange={onChange}
+        onChangeText={onChange}
       />
       <TouchableOpacity
         onPress={() => onAddItem(textInput)}
