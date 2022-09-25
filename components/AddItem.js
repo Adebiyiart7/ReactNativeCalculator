@@ -12,7 +12,7 @@ const AddItem = ({ onAddItem }) => {
   const [textInput, setTextInput] = useState("");
 
   const onChange = (e) => {
-    setTextInput(e.target.value);
+    setTextInput(e);
   };
 
   return (
