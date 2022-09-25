@@ -27,7 +27,12 @@ const AddItem = ({ onAddItem }) => {
         onPress={() => onAddItem(textInput)}
         style={styles.button}
       >
-        <Icon name="plus" size={20} color="firebrick" />
+        <Icon
+          style={styles.buttonText}
+          name="plus"
+          size={20}
+          color="firebrick"
+        />
       </TouchableOpacity>
     </View>
   );
@@ -37,9 +42,11 @@ export default AddItem;
 
 const styles = StyleSheet.create({
   button: {
-    textAlign: "center",
     backgroundColor: "lightblue",
     padding: 7,
+  },
+  buttonText: {
+    textAlign: "center",
   },
   input: {
     height: 50,
